@@ -6,7 +6,6 @@
   border: 2px solid black;
   width: 390px;
   margin: auto;
-
 }
 .board {
   background-color: #444;
@@ -35,7 +34,16 @@
   background-color: salmon;
   border: 2px solid black;
 }
-.game .heading{
+.game .heading {
   border-bottom: 1px solid black;
   padding-bottom: 25px;
+}
+.reset {
+  border-radius: 20px;
+  padding: 5px 20px;
+
+}
+.reset:hover{
+  cursor: pointer;
+  background-color: aqua;
 }

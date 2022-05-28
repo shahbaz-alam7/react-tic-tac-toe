@@ -6,6 +6,11 @@ const Board = () => {
   const [XisNext, setXisNext] = useState(true);
   const handleClickEvent = (i) => {
     const newSq = [...sq];
+    const winnerDeclared = Boolean(calculateWinner(sq));
+    const squareFilled = Boolean(sq[i]);
+    if (winnerDeclared || squareFilled) {
+      return;
+    }
     newSq[i] = XisNext ? "X" : "O";
     setSq(newSq);
     setXisNext(!XisNext);
@@ -30,6 +35,10 @@ const Board = () => {
     }
     return null;
   };
+  const resetButton = () => {
+    setSq([]);
+    setXisNext(true);
+  };
   const winner = calculateWinner(sq);
   const status = winner
     ? `Winner is ${winner}`
@@ -49,6 +58,9 @@ const Board = () => {
           );
         })}
       </div>
+      <button className="reset" onClick={resetButton}>
+        Reset
+      </button>
     </>
   );
 };
