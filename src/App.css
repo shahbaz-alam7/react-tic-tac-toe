@@ -1,38 +1,38 @@
-.App {
+.game {
+  background-color: salmon;
+  padding: 20px;
+  margin: 10px;
   text-align: center;
+  border: 2px solid black;
+}
+.board {
+  background-color: #444;
+  width: 290px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.square {
+  background-color: gold;
+  padding: 10px;
+  margin: 5px auto;
+  width: 70px;
+  height: 70px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 1.6rem;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.square:focus {
+  background-color: salmon;
+  border: 2px solid black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game .heading{
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
 }
