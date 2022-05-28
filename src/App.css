@@ -4,6 +4,9 @@
   margin: 10px;
   text-align: center;
   border: 2px solid black;
+  width: 390px;
+  margin: auto;
+
 }
 .board {
   background-color: #444;
